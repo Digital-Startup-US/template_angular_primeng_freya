@@ -11,7 +11,8 @@ const routes: Routes = [
         path: '',
         component: AppLayoutComponent,
         children: [
-            { path: '', loadChildren: () => import('./demo/components/dashboards/dashboards.module').then((m) => m.DashboardsModule) },
+            { path: '', loadChildren: () => import('./components/dashboard/dashboard.module').then((m) => m.DashboardModule) },
+            { path: 'dashboard', loadChildren: () => import('./demo/components/dashboards/dashboards.module').then((m) => m.DashboardsModule) },
             { path: 'uikit', data: { breadcrumb: 'UI Kit' }, loadChildren: () => import('./demo/components/uikit/uikit.module').then((m) => m.UIkitModule) },
             { path: 'utilities', data: { breadcrumb: 'Utilities' }, loadChildren: () => import('./demo/components/utilities/utilities.module').then((m) => m.UtilitiesModule) },
             { path: 'pages', data: { breadcrumb: 'Pages' }, loadChildren: () => import('./demo/components/pages/pages.module').then((m) => m.PagesModule) },

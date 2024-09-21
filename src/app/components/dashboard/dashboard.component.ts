@@ -11,10 +11,10 @@ interface expandedRows {
 }
 
 @Component({
-    templateUrl: './tabledemo.component.html',
+    templateUrl: './dashboard.component.html',
     providers: [MessageService, ConfirmationService]
 })
-export class TableDemoComponent implements OnInit {
+export class DashboardComponent implements OnInit {
     customers1: Customer[] = [];
 
     customers2: Customer[] = [];
@@ -73,7 +73,12 @@ export class TableDemoComponent implements OnInit {
         ];
 
         this.statuses = [
-
+            { label: 'Unqualified', value: 'unqualified' },
+            { label: 'Qualified', value: 'qualified' },
+            { label: 'New', value: 'new' },
+            { label: 'Negotiation', value: 'negotiation' },
+            { label: 'Renewal', value: 'renewal' },
+            { label: 'Proposal', value: 'proposal' }
         ];
     }
 
